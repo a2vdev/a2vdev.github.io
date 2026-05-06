@@ -139,7 +139,24 @@ If it does not work, check:
 
 ## Creating a New Project Folder
 
-If you are adding instructions for a brand new product and the project folder does not exist yet:
+If you are adding instructions for a brand new product and the project folder does not exist yet, there are two ways to do this:
+
+### Option A — Upload a folder from your computer (easier)
+
+This is the simplest approach if you already have your PDF ready.
+
+1. On your computer, create a new folder named with the project number (e.g. `1234`)
+2. Place your correctly named PDF inside that folder
+3. In the repository, navigate to the `guide/` folder
+4. Click **"Add file"** then **"Upload files"**
+5. Drag and drop the entire folder onto the upload area
+6. Scroll down and click **"Commit changes"**
+
+GitHub will create the folder and upload the file in one go — no placeholder file needed.
+
+### Option B — Create the folder manually on GitHub
+
+Use this if you need to create the folder before you have a file ready to put in it.
 
 1. Navigate to the `guide/` folder in the repository
 2. Click **"Add file"** then **"Create new file"**
@@ -156,6 +173,26 @@ If you are adding instructions for a brand new product and the project folder do
 ---
 
 ## Updating an Existing Document
+
+There are two ways to update a document, depending on whether you need to keep the same QR code URL or preserve the old file.
+
+### Option A — Overwrite the file (same URL, no redirect update needed)
+
+Use this if the QR code is already in the field and you don't want to change where it points.
+
+1. Navigate to the correct project folder in the repository
+2. Click **"Add file"** then **"Upload files"**
+3. Upload your new PDF with **exactly the same file name** as the original
+4. GitHub will warn you the file already exists — confirm the overwrite
+5. Scroll down and click **"Commit changes"**
+
+The QR code will now serve the new file automatically. No administrator action is needed.
+
+> 💡 The old version is not truly gone — it remains in Git history and can be recovered by an administrator if needed.
+
+### Option B — Upload as a new version (keeps the old file intact)
+
+Use this if you want to keep the old file accessible (e.g. the old QR code is still in use on some products) while also publishing a new version.
 
 1. Upload the new file with an updated name (e.g. add `-v2` or the date: `crossstitch-blue-v2.pdf`)
 2. Note the new URL using the format from [Step 6](#step-6--get-the-file-url) (without `.pdf` at the end)
